@@ -18,6 +18,9 @@ import Config
 # at the `config/runtime.exs`.
 config :ojpp_a, OjppA.Mailer, adapter: Swoosh.Adapters.Local
 
+config :db,
+  ecto_repos: [Db.Repo]
+
 config :ojpp_a_web,
   generators: [context_app: :ojpp_a]
 

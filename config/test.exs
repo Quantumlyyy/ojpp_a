@@ -1,5 +1,12 @@
 import Config
 
+config :db, Db.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "ojpp_a_#{System.get_env("MIX_TEST_PARTITION")}",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :ojpp_a_web, OjppAWeb.Endpoint,

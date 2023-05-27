@@ -23,7 +23,7 @@ defmodule OjppAWeb.MixProject do
   def application do
     [
       mod: {OjppAWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -49,7 +49,9 @@ defmodule OjppAWeb.MixProject do
       {:gettext, "~> 0.20"},
       {:ojpp_a, in_umbrella: true},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+
+      {:db, in_umbrella: true}
     ]
   end
 

@@ -23,7 +23,7 @@ defmodule OjppA.MixProject do
   def application do
     [
       mod: {OjppA.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -38,7 +38,9 @@ defmodule OjppA.MixProject do
     [
       {:phoenix_pubsub, "~> 2.1"},
       {:swoosh, "~> 1.3"},
-      {:finch, "~> 0.13"}
+      {:finch, "~> 0.13"},
+
+      {:db, in_umbrella: true}
     ]
   end
 
